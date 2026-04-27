@@ -1,7 +1,7 @@
 export const CHANGELOG = [
   {
     version: '1.4.1',
-    date: '2026-04-26',
+    date: '2026-04-27',
     tag: 'fix',
     title: 'Correction de bug',
     changes: [
@@ -10,7 +10,7 @@ export const CHANGELOG = [
   },
   {
     version: '1.4.0',
-    date: '2026-04-26',
+    date: '2026-04-27',
     tag: 'feature',
     title: 'Confirmations & polish',
     changes: [
@@ -32,7 +32,7 @@ export const CHANGELOG = [
   },
   {
     version: '1.2.0',
-    date: '2026-04-26',
+    date: '2026-04-25',
     tag: 'feature',
     title: 'Easter Eggs',
     changes: [
@@ -45,7 +45,7 @@ export const CHANGELOG = [
   },
   {
     version: '1.1.0',
-    date: '2026-04-26',
+    date: '2026-04-25',
     tag: 'feature',
     title: 'Support multilingue & rebranding',
     changes: [
