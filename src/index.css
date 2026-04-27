@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-bg: #f9f8f6;
+    --color-surface: #ffffff;
+    --color-border: #e5e4e0;
+    --color-text: #1a1a18;
+    --color-muted: #6b6b67;
+    --color-accent: #1a1a18;
+    --color-accent-fg: #ffffff;
+    --color-success: #16a34a;
+    --color-warning: #d97706;
+    --color-danger: #dc2626;
+    --color-info: #2563eb;
+  }
+
+  .dark {
+    --color-bg: #111110;
+    --color-surface: #1c1c1a;
+    --color-border: #2e2e2b;
+    --color-text: #f0ede8;
+    --color-muted: #8a8a84;
+    --color-accent: #f0ede8;
+    --color-accent-fg: #111110;
+    --color-success: #22c55e;
+    --color-warning: #f59e0b;
+    --color-danger: #ef4444;
+    --color-info: #3b82f6;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: 'Syne', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  textarea, input {
+    font-family: inherit;
+  }
+}
+
+@layer utilities {
+  .scrollbar-thin::-webkit-scrollbar { width: 4px; }
+  .scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
+  .scrollbar-thin::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 2px; }
+
+  .cursor-blink::after {
+    content: '▋';
+    animation: blink 0.8s steps(1) infinite;
+    opacity: 0.6;
+  }
+
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+
+  /* Markdown output styles */
+  .markdown-output { font-size: 0.875rem; line-height: 1.7; }
+  .markdown-output p { margin-bottom: 0.75rem; }
+  .markdown-output p:last-child { margin-bottom: 0; }
+  .markdown-output h1 { font-size: 1.2rem; font-weight: 600; margin: 1.25rem 0 0.5rem; }
+  .markdown-output h2 { font-size: 1.05rem; font-weight: 600; margin: 1rem 0 0.4rem; }
+  .markdown-output h3 { font-size: 0.95rem; font-weight: 600; margin: 0.75rem 0 0.35rem; }
+  .markdown-output strong { font-weight: 600; }
+  .markdown-output em { font-style: italic; }
+  .markdown-output ul { list-style: disc; padding-left: 1.25rem; margin-bottom: 0.75rem; }
+  .markdown-output ol { list-style: decimal; padding-left: 1.25rem; margin-bottom: 0.75rem; }
+  .markdown-output li { margin-bottom: 0.25rem; }
+  .markdown-output code { font-family: 'DM Mono', monospace; font-size: 0.8rem; background: var(--color-border); padding: 1px 5px; border-radius: 4px; }
+  .markdown-output pre { background: var(--color-bg); border: 0.5px solid var(--color-border); border-radius: 8px; padding: 12px 14px; overflow-x: auto; margin-bottom: 0.75rem; }
+  .markdown-output pre code { background: none; padding: 0; font-size: 0.8rem; }
+  .markdown-output blockquote { border-left: 2px solid var(--color-border); padding-left: 0.75rem; color: var(--color-muted); margin-bottom: 0.75rem; }
+  .markdown-output hr { border: none; border-top: 0.5px solid var(--color-border); margin: 1rem 0; }
+  .markdown-output a { color: var(--color-info); text-decoration: underline; }
+}
